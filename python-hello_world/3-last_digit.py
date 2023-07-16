@@ -8,6 +8,6 @@ six_zero = "and is less than 6 and not 0"
 if (last > 5):
     print(f"{s_num} {number} is {last} {fi_ve}")
 elif (last == 0):
-    print(s_num + "{} is {} and is 0".format(str(number), str(last)))
+    print(s_num + " {} is {} and is 0".format(str(number), str(last)))
 elif (last < 6 and last != 0):
-    print(f"{s_num} -{number} is -{last} {six_zero}")
+    print(f"{s_num} {number} is -{last} {six_zero}")
