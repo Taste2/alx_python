@@ -6,5 +6,5 @@ if (last_digit > 5):
     print("Last digit of {} is {} and is greater than 5".format(str(number), str(last_digit)))
 elif (last_digit == 0):
     print("Last digit of {} is {} and is zero".format(str(number), str(last_digit)))
-elif (last_digit < 6 and != 0):
+elif (last_digit < 6 and last_digit != 0):
     print("Last digit of {} is {} and not 0")
