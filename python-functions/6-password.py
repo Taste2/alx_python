@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 def validate_password(password):
+    '''validates a password'''
     if len(password) < 8:
         return False
     if " " in password:
