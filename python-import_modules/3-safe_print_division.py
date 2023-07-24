@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+result = None
 def safe_print_division(a, b):
     try:
         result = a / b
@@ -7,5 +8,4 @@ def safe_print_division(a, b):
     else:
         return result
     finally:
-        result = a / b
         print("Inside result: {}".format(result))
