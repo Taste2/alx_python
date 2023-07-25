@@ -7,7 +7,7 @@ if __name__ == "__main__":
         print("{} arguments.".format(argv_len))
     elif argv_len == 1:
         print("{} argument:".format(argv_len))
-        print("{}: {}".format(argv_len, sys.argv[0]))
+        print("{}: {}".format(argv_len, arg_slice[0]))
     else:
         print("{} arguments:".format(argv_len))
         for i in range(1, argv_len + 1):
