@@ -2,6 +2,8 @@
 def best_score(a_dictionary):
     values = []
     l_num = None
+    if not a_dictionary:
+        return None
     for k, v in a_dictionary.items():
         values.append(v)
         srt = sorted(values)
