@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    if not matrix or not matrix[0]:
-        print()
-        return
     exp_matrix = []
     for row in matrix:
         exp_number_row = []
