@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def print_matrix_integer(matrix=[]):
+def square_matrix_simple(matrix=[]):
     if not matrix or not matrix[0]:
         print()
         return
