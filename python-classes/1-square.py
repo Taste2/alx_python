@@ -46,7 +46,7 @@ class Square():
         Args:
             size: The size of the square
         """
-        if size == int(size):
+        if size <= 0 or size >= 0:
             self.__size = size
         else:
             raise TypeError
