@@ -33,7 +33,7 @@ class Square():
         Args:
             size: The size of the square
         """
-        if size.isdigit():
+        if isinstance(size, int):
             self.__size = size
         else:
             raise TypeError("size must be an integer")
