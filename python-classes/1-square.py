@@ -26,18 +26,16 @@ class Square():
         self.__size = size
 
 
-    def sq_size(self, size=0):
+    def sq_size(self, size):
         """
         A setter to set the size of attribute to an integer
 
         Args:
             size: The size of the square
         """
-        if isinstance(size, int):
-            self.__size = size
-        else:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size  < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        
+        self.__size = size
