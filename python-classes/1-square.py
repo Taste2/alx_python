@@ -50,7 +50,7 @@ class Square():
             self.__size = size
         else:
             raise TypeError
-            print("size must be an integer")
+        print("size must be an integer")
     
     @sq_size.setter
     def sq_size(self, size):
@@ -64,4 +64,4 @@ class Square():
             self.__size = size
         else:
             raise ValueError
-            print("size must be >= 0")
+        print("size must be >= 0")
