@@ -23,11 +23,8 @@ class Square():
             Args:
                 size(int): the size of the square initialized to 0
                 """
-        if size == int(size):
-            self.__size = size
-        else:
+        if size != int(size):
             raise TypeError("size must be an integer")
-        if size  >= 0:
-            self.__size = size
-        else:
+        if size  < 0:
             raise ValueError("size must be >= 0")
+        self.__size = size
