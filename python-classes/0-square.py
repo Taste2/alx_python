@@ -1,3 +1,4 @@
+"""This module is a definition of a class Square"""
 class Square():
     """This class defines a square with its sizes"""
 
