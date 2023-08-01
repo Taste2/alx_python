@@ -62,7 +62,7 @@ class Square():
         """
         Public method that prints square of #
         """
-        if self._size == 0:
+        if self.__size == 0:
             print()
 
         for i in range(0, self.__size):
