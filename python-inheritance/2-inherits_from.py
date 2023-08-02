@@ -1,8 +1,10 @@
 """
-This module checks if an instance is directly or indirectly a n instance of specific class
+This module checks if an instance is directly or 
+indirectly a n instance of specific class
 
 """
 def inherits_from(obj, a_class):
+
     """
     check if obj is an instance of class
     Args:
@@ -13,7 +15,8 @@ def inherits_from(obj, a_class):
         True: obj is an instance of a_class
         False: obj not an instance of a_class
     """
-    if isinstance(obj, a_class):
+
+    if issubclass(type(obj), a_class) or isinstance(obj, a_class):
         return True
     else:
         return False
