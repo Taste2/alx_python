@@ -5,7 +5,4 @@ class BaseGeometry():
     """
     This class models an empty class
     """
-    def __init__(self):
-        """
-        an empty attribute method
-        """
+    pass
