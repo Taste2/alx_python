@@ -9,4 +9,3 @@ class BaseGeometry():
         """
         an empty attribute method
         """
-        pass
