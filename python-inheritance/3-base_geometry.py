@@ -5,4 +5,5 @@ class BaseGeometry():
     """
     This class models an empty class
     """
-    pass
+    def __init__(self):
+        pass
