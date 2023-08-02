@@ -5,3 +5,4 @@ class BaseGeometry:
     """
     This class models an empty class
     """
+    pass
