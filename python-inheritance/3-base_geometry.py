@@ -12,7 +12,7 @@ class BaseGeometry():
         control access to some inherited attributes
         """
         n_attributes = []
-        attributes = super().__dir__
+        attributes = super().__dir__()
         for attr in attributes:
             if attr != '__init_subclass__':
                 n_attributes.append(attr)
