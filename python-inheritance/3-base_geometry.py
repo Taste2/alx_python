@@ -7,7 +7,7 @@ class BaseGeometry():
     """
     This class models an empty class
     """
-    def __dir__(self):
+    def __dir__(cls):
         """
         control access to some inherited attributes
         """
