@@ -22,7 +22,7 @@ class BaseGeometry():
         """a method to raise an exception with a message"""
         raise Exception("area() is not implemented")
     
-    def interger_validator(self, name, value):
+    def integer_validator(self, name, value):
         """
         A method that validates value
         """
