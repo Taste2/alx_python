@@ -34,7 +34,7 @@ class BaseGeometry():
     
 class Rectangle(BaseGeometry):
     """
-    Models a rectangle. A child class of BaseGeometgry
+    Models a rectangle. A derived class of BaseGeometgry
     """
     def __init__(self, width, height) -> None:
         """
@@ -44,6 +44,6 @@ class Rectangle(BaseGeometry):
         super().__init__(self, width, height)
         self.__width = width
         self.__height = height
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        self.__width.integer_validator("width", width)
+        self.__height.integer_validator("height", height)
         
