@@ -36,6 +36,17 @@ class Rectangle(BaseGeometry):
     """
     Models a rectangle. A derived class of BaseGeometgry
     """
+    def __dir__(cls) -> None:
+        """
+        Removes __init_subclass__ from list of class attributes
+        """
+        attributes = super().__dir__()
+        n_attributes = []
+        for attr in attributes:
+            if attr != '__init_subclass__':
+                n_attributes.append(attr)
+        return n_attributes
+    
     def __init__(self, width, height) -> None:
         """
         Call attriutes of parent.
