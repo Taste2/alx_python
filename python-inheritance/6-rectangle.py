@@ -52,9 +52,7 @@ class Rectangle(BaseGeometry):
         Call attriutes of parent.
         validates attributes for positive integer
         """
-        super().__init__(self, width, height)
-        self.__width = width
-        self.__height = height
+        super().__init__(self)
         self.__width.integer_validator("width", width)
         self.__height.integer_validator("height", height)
         
