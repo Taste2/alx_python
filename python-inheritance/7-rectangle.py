@@ -55,13 +55,13 @@ class Rectangle(BaseGeometry):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
 
-        def area(self):
+    def __str__(self):
+            """
+            Returns the string representation"""
+            return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+    def area(self):
             """
             This method computes the area of the triangle
             """
             return self.__width * self.__height
-        
-        def __str__(self):
-            """
-            Returns the string representation"""
-            return "[Rectangle] {}/{}".format(self.__width, self.__height)
