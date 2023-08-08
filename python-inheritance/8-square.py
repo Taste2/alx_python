@@ -68,29 +68,41 @@ class Rectangle(BaseGeometry):
     
 class Square(Rectangle):
     """
-    A class or blueprint that models a square
+    Square class that inherits from Rectangle.
+
+    Attributes:
+        __size (int): The size of the square.
     """
+
     def __init__(self, size):
         """
-          instantiate attributes to an object 
+        Initializes a Square instance.
+
+        Args:
+            size (int): The size of the square.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is not positive.
         """
         self.integer_validator("size", size)
+        super().__init__(size, size)
         self.__size = size
 
-    def __dir__(cls) -> None:
+    def __str__(self):
         """
-        control access to some inherited attributes
+        Returns a string representation of the Square instance.
+
+        Returns:
+            str: String representation of the Square instance.
         """
-        attributes = super().__dir__()
-        n_attributes = []
-        for attr in attributes:
-            if attr != '__init_subclass__':
-                n_attributes.append(attr)
-        return n_attributes
+        return "[Square] {}/{}".format(self.__size, self.__size)
 
     def area(self):
         """
-        computes area of the square
+        Computes the area of the square.
+
+        Returns:
+            int: The area of the square.
         """
-        return self.__size ** 2
-    
+        return self.__size * self.__size
