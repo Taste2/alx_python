@@ -75,8 +75,18 @@ class Square(Rectangle):
           instantiate attributes to an object 
         """
         self.integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
+
+    def __dir__(cls) -> None:
+        """
+        control access to some inherited attributes
+        """
+        attributes = super().__dir__()
+        n_attributes = []
+        for attr in attributes:
+            if attr != '__init_subclass__':
+                n_attributes.append(attr)
+        return n_attributes
 
     def area(self):
         """
