@@ -2,6 +2,8 @@
 """
 Module containing the Rectangle class.
 """
+
+
 class BaseGeometry():
     """
     This class models an empty class
@@ -16,11 +18,11 @@ class BaseGeometry():
             if attr != '__init_subclass__':
                 n_attributes.append(attr)
         return n_attributes
-    
+
     def area(self):
         """a method to raise an exception with a message"""
         raise Exception("area() is not implemented")
-    
+
     def integer_validator(self, name, value):
         """
         A method that validates value
@@ -29,6 +31,7 @@ class BaseGeometry():
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
 
 class Rectangle(BaseGeometry):
     """
@@ -44,7 +47,7 @@ class Rectangle(BaseGeometry):
             if attr != '__init_subclass__':
                 n_attributes.append(attr)
         return n_attributes
-    
+
     def __init__(self, width, height):
         """
         Call attriutes of parent.
@@ -65,44 +68,31 @@ class Rectangle(BaseGeometry):
             This method computes the area of the triangle
             """
             return self.__width * self.__height
-    
+
+
 class Square(Rectangle):
     """
-    Square class that inherits from Rectangle.
-
-    Attributes:
-        __size (int): The size of the square.
+    A class or blueprint that models a square
     """
-
     def __init__(self, size):
         """
-        Initializes a Square instance.
-
-        Args:
-            size (int): The size of the square.
-
-        Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is not positive.
+          instantiate attributes to an object 
         """
-        self.integer_validator("size", size)
-        super().__init__(size, size)
         self.__size = size
+        self.integer_validator("size", size)
 
     def __str__(self):
         """
         Returns a string representation of the Square instance.
-
         Returns:
             str: String representation of the Square instance.
         """
         return "[Square] {}/{}".format(self.__size, self.__size)
 
+
     def area(self):
         """
-        Computes the area of the square.
-
-        Returns:
-            int: The area of the square.
+        computes area of the square
         """
-        return self.__size * self.__size
+        return self.__size ** 2
+    
