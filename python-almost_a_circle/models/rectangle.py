@@ -31,13 +31,13 @@ class Rectangle(Base):
         y (int): y position of rectangle
         """
         super().__init__(id)
-        self.validate(width, height, x, y)
+        self.validate(width, height, x=0, y=0)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
 
-    def validate(self, width, height, x, y):
+    def validate(self, width, height, x=0, y=0):
         """
         validates the arguments passed into the object
         """
