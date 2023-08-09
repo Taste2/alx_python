@@ -41,19 +41,19 @@ class Rectangle(Base):
         """
         validates the arguments passed into the object
         """
-        if width != int(width):
+        if self.__width != int(self.__width):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
-        if height != int(height):
+        if self.__height != int(self.__height):
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
-        if x != int(x):
+        if self.__x != int(self.__x):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
-        if y != int(y):
+        if self.__y != int(self.__y):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
