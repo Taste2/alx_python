@@ -1,9 +1,7 @@
 
 """
-Module containing the Square class.
-The Square class inherits from the Rectangle class
+Module containing the Rectangle class.
 """
-
 class OverrideMetaClass(type):
     """def __new__(cls, name, bases, attrs):
         # Customize the class creation process here
@@ -21,7 +19,7 @@ class OverrideMetaClass(type):
 Rectangle = __import__('7-rectangle').Rectangle
 
 
-class Square(Rectangle, metaclass=OverrideMetaClass):
+class Square(Rectangle, mnetaclass=OverrideMetaClass):
     """
     A class or blueprint that models a square
     """
