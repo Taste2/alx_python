@@ -4,9 +4,25 @@ Rectangle Module
 This module defines a rectangle
 
 Classes:
+- Base - Represents base class for rest of classes
 - Rectangle: Represents a rectangle inherited from Base class
 """
-Base = __import__('base').Base
+
+class Base:
+    """
+    Base class for subsequent tasks
+    """
+    __nb_objects = 0
+    def __init__(self, id=None):
+        """
+        Class constructor. Pass attributes to objects
+        """
+        if id != None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
+
 
 class Rectangle(Base):
     """
