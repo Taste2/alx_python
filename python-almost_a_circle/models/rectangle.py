@@ -42,21 +42,21 @@ class Rectangle(Base):
         validates the arguments passed into the object
         """
         if width != int(width):
-            raise TypeError("{} must be an integer".format(width))
+            raise TypeError("width must be an integer")
         if width <= 0:
-            raise ValueError("{} must be > 0".format(width))
+            raise ValueError("width must be > 0")
         if height != int(height):
-            raise TypeError("{} must be an integer".format(height))
+            raise TypeError("height must be an integer")
         if height <= 0:
-            raise ValueError("{} must be > 0".format(height))
+            raise ValueError("height must be > 0")
         if x != int(x):
-            raise TypeError("{} must be an integer".format(x))
+            raise TypeError("x must be an integer")
         if x < 0:
-            raise ValueError("{} must be >= 0".format(x))
+            raise ValueError("x must be >= 0")
         if y != int(y):
-            raise TypeError("{} must be an integer".format(y))
+            raise TypeError("y must be an integer")
         if y < 0:
-            raise ValueError("{} must be >= 0".format(y))
+            raise ValueError("y must be >= 0")
 
     @property
     def width(self):
@@ -77,9 +77,9 @@ class Rectangle(Base):
         width: the width of rectangle
         """
         if width != int(width):
-            raise TypeError("{} must be an integer".format(width))
+            raise TypeError("width must be an integer")
         if width <= 0:
-            raise ValueError("{} must be > 0".format(width))
+            raise ValueError("width must be > 0")
         self.__width = width
 
     @property
@@ -101,9 +101,9 @@ class Rectangle(Base):
         height: the height of rectangle
         """
         if height != int(height):
-            raise TypeError("{} must be an integer".format(height))
+            raise TypeError("height must be an integer")
         if height <= 0:
-            raise ValueError("{} must be > 0".format(height))
+            raise ValueError("height must be > 0")
         self.__height = height
 
     @property
@@ -125,9 +125,9 @@ class Rectangle(Base):
         x: the x position of rectangle
         """
         if x != int(x):
-            raise TypeError("{} must be an integer".format(x))
+            raise TypeError("x must be an integer")
         if x < 0:
-            raise ValueError("{} must be >= 0".format(x))
+            raise ValueError("x must be >= 0")
         self.__x = x
 
     @property
@@ -149,7 +149,7 @@ class Rectangle(Base):
         y: the y position of rectangle
         """
         if y != int(y):
-            raise TypeError("{} must be an integer".format(y))
+            raise TypeError("y must be an integer")
         if y < 0:
-            raise ValueError("{} must be >= 0".format(y))
+            raise ValueError("y must be >= 0")
         self.__y = y
