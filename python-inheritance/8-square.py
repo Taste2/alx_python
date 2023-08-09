@@ -2,7 +2,7 @@
 """
 Module containing the Rectangle class.
 """
-class DefinitionOverrideMetaClass(type):
+class OverrideMetaClass(type):
     """def __new__(cls, name, bases, attrs):
         # Customize the class creation process here
         return super().__new__(cls, name, bases, attrs)"""
@@ -19,7 +19,7 @@ class DefinitionOverrideMetaClass(type):
 Rectangle = __import__('7-rectangle').Rectangle
 
 
-class Square(Rectangle):
+class Square(Rectangle, metaclass=OverrideMetaClass):
     """
     A class or blueprint that models a square
     """
