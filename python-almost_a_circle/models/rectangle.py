@@ -31,6 +31,13 @@ class Rectangle(Base):
         y (int): y position of rectangle
         """
         super().__init__(id)
+        self.validate(width, height, x, y)
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+
+    def validate(width, height, x, y):
         if width != int(width):
             raise TypeError("{} must be an integer".format(width))
         if width <= 0:
@@ -47,12 +54,6 @@ class Rectangle(Base):
             raise TypeError("{} must be an integer".format(y))
         if y < 0:
             raise ValueError("{} must be >= 0".format(y))
-        self.__x = x
-        self.__height = height
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
 
     @property
     def width(self):
