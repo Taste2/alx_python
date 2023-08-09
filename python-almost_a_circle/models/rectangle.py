@@ -38,6 +38,9 @@ class Rectangle(Base):
         self.__y = y
 
     def validate(width, height, x, y):
+        """
+        validates the arguments passed into the object
+        """
         if width != int(width):
             raise TypeError("{} must be an integer".format(width))
         if width <= 0:
