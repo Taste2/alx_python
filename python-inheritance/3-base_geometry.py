@@ -1,7 +1,7 @@
 """
 This module is an empty class 
 """
-class DefinitionOverrideMetaClass(type):
+class OverrideMetaClass(type):
     """def __new__(cls, name, bases, attrs):
         # Customize the class creation process here
         return super().__new__(cls, name, bases, attrs)"""
@@ -15,7 +15,7 @@ class DefinitionOverrideMetaClass(type):
                 super().__dir__() if attribute != '__init_subclass__']
 
 
-class BaseGeometry():
+class BaseGeometry(metaclass=OverrideMetaClass):
     """
     This class models an empty class
     """
