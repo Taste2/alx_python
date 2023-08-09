@@ -7,6 +7,9 @@ Classes:
 - Rectangle: Represents a rectangle inherited from Base class
 """
 from base import Base
+"""
+Import Base class
+"""
 
 class Rectangle(Base):
     """
@@ -25,7 +28,7 @@ class Rectangle(Base):
         Parameters:
         width (int): width of the rectangle
         height (int): height of the rectangle
-        x (int): x position o rectangle
+        x (int): x position of rectangle
         y (int): y position of rectangle
         """
         self.__width = width
