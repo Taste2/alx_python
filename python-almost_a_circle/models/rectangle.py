@@ -203,4 +203,4 @@ class Rectangle(Base):
         """
         assigns an argument to each attribute
         """
-        args = ('id', 'width', 'height', 'x', 'y')
+        args = ('self.id', 'self.__width', 'self.__height', 'self.__x', 'self.__y')
