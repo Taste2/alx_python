@@ -37,7 +37,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    def validate(width, height, x, y):
+    def validate(self, width, height, x, y):
         """
         validates the arguments passed into the object
         """
