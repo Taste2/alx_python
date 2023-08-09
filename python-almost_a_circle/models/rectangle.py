@@ -31,31 +31,49 @@ class Rectangle(Base):
         y (int): y position of rectangle
         """
         super().__init__(id)
-        self.validate(width, height, x, y)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+        self.validate_width()
+        self.validate_height()
+        self.validate_x()
+        self.validate_y()
 
-    def validate(self, width, height, x, y):
+    def validate_width(self):
         """
         validates the arguments passed into the object
         """
-        if self.__width != int(self.__width):
+        if not isinstance(self.__width, int):
             raise TypeError("width must be an integer")
-        if width <= 0:
+        if self.__width <= 0:
             raise ValueError("width must be > 0")
-        if self.__height != int(self.__height):
+        
+    def validate_height(self):
+        """
+        validates the arguments passed into the object
+        """  
+        if not isinstance(self.__height, int):
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if self.__height <= 0:
             raise ValueError("height must be > 0")
-        if self.__x != int(self.__x):
+       
+    def validate_x(self):
+        """
+        validates the arguments passed into the object
+        """
+        if not isinstance(self.__x, int):
             raise TypeError("x must be an integer")
-        if x < 0:
+        if self.__x < 0:
             raise ValueError("x must be >= 0")
-        if self.__y != int(self.__y):
+        
+    def validate_y(self):
+        """
+        validates the arguments passed into the object
+        """
+        if not isinstance(self.__y, int):
             raise TypeError("y must be an integer")
-        if y < 0:
+        if self.__y < 0:
             raise ValueError("y must be >= 0")
 
     @property
@@ -76,7 +94,7 @@ class Rectangle(Base):
         attribute:
         width: the width of rectangle
         """
-        if width != int(width):
+        if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
@@ -100,7 +118,7 @@ class Rectangle(Base):
         attribute:
         height: the height of rectangle
         """
-        if height != int(height):
+        if not isinstance(height, int):
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
@@ -124,7 +142,7 @@ class Rectangle(Base):
         attribute:
         x: the x position of rectangle
         """
-        if x != int(x):
+        if not isinstance(x, int):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
@@ -148,7 +166,7 @@ class Rectangle(Base):
         attribute:
         y: the y position of rectangle
         """
-        if y != int(y):
+        if not isinstance(y, int):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0".format(y))
