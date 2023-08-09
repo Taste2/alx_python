@@ -1,8 +1,8 @@
 
 """
-Module containing the Rectangle class.
+Module containing the Square class.
+The Square class inherits from the Rectangle class
 """
-
 
 class OverrideMetaClass(type):
     """def __new__(cls, name, bases, attrs):
