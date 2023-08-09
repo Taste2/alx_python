@@ -41,19 +41,19 @@ class Rectangle(Base):
         """
         validates the arguments passed into the object
         """
-        if width != int(width):
+        if not isinstance(type(width), int):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
-        if height != int(height):
+        if not isinstance(type(height), int):
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
-        if x != int(x):
+        if not isinstance(type(x), int):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
-        if y != int(y):
+        if not isinstance(type(y), int):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
@@ -76,7 +76,7 @@ class Rectangle(Base):
         attribute:
         width: the width of rectangle
         """
-        if width != int(width):
+        if not isinstance(type(width), int):
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
@@ -100,7 +100,7 @@ class Rectangle(Base):
         attribute:
         height: the height of rectangle
         """
-        if height != int(height):
+        if not isinstance(type(height), int):
             raise TypeError("height must be an integer")
         if height <= 0:
             raise ValueError("height must be > 0")
@@ -124,7 +124,7 @@ class Rectangle(Base):
         attribute:
         x: the x position of rectangle
         """
-        if x != int(x):
+        if not isinstance(type(x), int):
             raise TypeError("x must be an integer")
         if x < 0:
             raise ValueError("x must be >= 0")
@@ -148,7 +148,7 @@ class Rectangle(Base):
         attribute:
         y: the y position of rectangle
         """
-        if y != int(y):
+        if not isinstance(type(y), int):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
