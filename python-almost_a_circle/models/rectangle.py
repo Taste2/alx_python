@@ -31,10 +31,24 @@ class Rectangle(Base):
         y (int): y position of rectangle
         """
         super().__init__(id)
-        self.width(width)
-        self.height(height)
-        self.x(x)
-        self.y(x)
+        if width != int(width):
+            raise TypeError("{} must be an integer".format(width))
+        if width <= 0:
+            raise ValueError("{} must be > 0".format(width))
+        if height != int(height):
+            raise TypeError("{} must be an integer".format(height))
+        if height <= 0:
+            raise ValueError("{} must be > 0".format(height))
+        if x != int(x):
+            raise TypeError("{} must be an integer".format(x))
+        if x < 0:
+            raise ValueError("{} must be >= 0".format(x))
+        if y != int(y):
+            raise TypeError("{} must be an integer".format(y))
+        if y < 0:
+            raise ValueError("{} must be >= 0".format(y))
+        self.__x = x
+        self.__height = height
         self.__width = width
         self.__height = height
         self.__x = x
