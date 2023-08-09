@@ -31,6 +31,10 @@ class Rectangle(Base):
         y (int): y position of rectangle
         """
         super().__init__(id)
+        self.width(width)
+        self.height(height)
+        self.x(x)
+        self.y(x)
         self.__width = width
         self.__height = height
         self.__x = x
@@ -49,11 +53,15 @@ class Rectangle(Base):
     @width.setter
     def width(self, width):
         """
-        Sets value for private attribute
+        Sets value and validation for private attribute
 
         attribute:
         width: the width of rectangle
         """
+        if width != int(width):
+            raise TypeError("{} must be an integer".format(width))
+        if width <= 0:
+            raise ValueError("{} must be > 0".format(width))
         self.__width = width
 
     @property
@@ -69,11 +77,15 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         """
-        Sets value for private attribute
+        Sets value and validation for private attribute
 
         attribute:
         height: the height of rectangle
         """
+        if height != int(height):
+            raise TypeError("{} must be an integer".format(height))
+        if height <= 0:
+            raise ValueError("{} must be > 0".format(height))
         self.__height = height
 
     @property
@@ -89,11 +101,15 @@ class Rectangle(Base):
     @x.setter
     def x(self, x):
         """
-        Sets value for private attribute
+        Sets value and validation for private attribute
 
         attribute:
         x: the x position of rectangle
         """
+        if x != int(x):
+            raise TypeError("{} must be an integer".format(x))
+        if x < 0:
+            raise ValueError("{} must be >= 0".format(x))
         self.__x = x
 
     @property
@@ -109,9 +125,13 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         """
-        Sets value for private attribute
+        Sets value and validation for private attribute
 
         attribute:
         y: the y position of rectangle
         """
+        if y != int(y):
+            raise TypeError("{} must be an integer".format(y))
+        if y < 0:
+            raise ValueError("{} must be >= 0".format(y))
         self.__y = y
