@@ -6,6 +6,7 @@ This module defines a rectangle
 Classes:
 - Rectangle: Represents a rectangle inherited from Base class
 """
+Base = __import__('base').Base
 
 class Rectangle(Base):
     """
