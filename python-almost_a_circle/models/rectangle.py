@@ -8,7 +8,7 @@ Classes:
 - Rectangle: Represents a rectangle inherited from Base class
 """
 
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
     """
