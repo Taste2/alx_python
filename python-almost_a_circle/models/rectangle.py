@@ -8,7 +8,7 @@ Classes:
 - Rectangle: Represents a rectangle inherited from Base class
 """
 
-from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     """
@@ -186,7 +186,11 @@ class Rectangle(Base):
         prints in stdout the Rectangle 
         instance with the character #
         """
+        for space in range(0, self.__y):
+                print()
         for i in range(0, self.__height):
+            for tab in range(0, self.__x):
+                print(" ", end="")
             for j in range(0, self.__width):
                 print("#", end="")
             print()
