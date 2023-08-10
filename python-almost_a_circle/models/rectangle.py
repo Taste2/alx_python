@@ -8,7 +8,7 @@ Classes:
 - Rectangle: Represents a rectangle inherited from Base class
 """
 
-from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     """
@@ -203,4 +203,23 @@ class Rectangle(Base):
         """
         assigns an argument to each attribute
         """
-        args = ('self.id', 'self.__width', 'self.__height', 'self.__x', 'self.__y')
+        if len(args) == 1:
+            self.id = args
+        elif len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        elif len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        elif len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        elif len(args) == 5:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
