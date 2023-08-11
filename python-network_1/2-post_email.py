@@ -5,9 +5,9 @@ import sys
 import requests
 
 url = sys.argv[1]
-email = {'email':sys.argv[2]}
+email = sys.argv[2]
+parameter = {'email':email}
 
-
-response = requests.post(url, params=email)
-print(response.text)
+response = requests.post(url, params=parameter)
+print(response.headers['email'])
 
