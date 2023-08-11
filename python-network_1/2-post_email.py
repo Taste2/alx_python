@@ -9,5 +9,5 @@ email = sys.argv[2]
 parameter = {'email':email}
 
 response = requests.post(url, params=parameter)
-print(response.text['email'])
+print(parameter['email'])
 
