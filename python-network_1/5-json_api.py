@@ -17,7 +17,7 @@ response = requests.post(url, json=parameter)
 if response.json():
     for key, value in response.json().items():
         print("[{}] {}".format(key, value))
-elif response.json() == {}:
+elif not response.json():
     print("No result")
 else:
     print("Not a valid JSON")
