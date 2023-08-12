@@ -14,7 +14,7 @@ parameter = {'letter':q}
 url = 'http://0.0.0.0:5000/search_user'
 response = requests.post(url, params=parameter)
 
-if response.json():
+if response.headers['Content-Type'] == 'application/json':
         print("[{}] {}".format(response.json()['id'], response.json()['name']))
 elif not response.json():
     print("No result")
