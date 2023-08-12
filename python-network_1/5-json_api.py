@@ -10,9 +10,9 @@ if len(sys.argv) == 1:
 else:
     q = sys.argv[1]
 
-parameter = {'q':q}
+parameter = {'letter':q}
 url = 'http://0.0.0.0:5000/search_user'
-response = requests.post(url, json=parameter)
+response = requests.post(url, params=parameter)
 
 if response.json():
         print("[{}] {}".format(response.json()['id'], response.json()['name']))
