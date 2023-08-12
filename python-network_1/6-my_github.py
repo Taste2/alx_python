@@ -11,4 +11,7 @@ password = sys.argv[2]
 parameters = (username, password)
 
 response = requests.get(url, auth=parameters)
-print(response.json()['id'])
+try:
+    print(response.json()['id'])
+except:
+    print('None')
