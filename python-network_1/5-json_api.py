@@ -6,15 +6,15 @@ import sys
 import requests
 
 if len(sys.argv) == 1:
-    q = ""
+    letter = ""
 else:
-    q = sys.argv[1]
+    letter = sys.argv[1]
 
-parameter = {'letter':q}
+parameter = {'q':letter}
 url = 'http://0.0.0.0:5000/search_user'
-response = requests.post(url, params=parameter)
+response = requests.post(url, data=parameter)
 
-if response.headers['Content-Type'] == 'application/json':
+if response.json():
         print("[{}] {}".format(response.json()['id'], response.json()['name']))
 elif not response.json():
     print("No result")
