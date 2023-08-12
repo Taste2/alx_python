@@ -10,4 +10,4 @@ username = sys.argv[1]
 password = sys.argv[2]
 
 response = requests.get(url)
-print(response.json()['id'])
+print(response.headers['id'])
