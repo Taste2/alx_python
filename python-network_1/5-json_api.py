@@ -5,7 +5,7 @@ Python script that takes in a letter and sends a POST request to
 import sys
 import requests
 
-if sys.argv[1] is False:
+if sys.argv[1] == "":
     q = ""
 else:
     q = sys.argv[1]
