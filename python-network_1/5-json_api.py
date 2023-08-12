@@ -14,9 +14,10 @@ parameter = {'q':letter}
 url = 'http://0.0.0.0:5000/search_user'
 response = requests.post(url, data=parameter)
 
-if response.json():
-        print("[{}] {}".format(response.json()['id'], response.json()['name']))
-elif not response.json():
-    print("No result")
-else:
+try:
+    if response.json():
+            print("[{}] {}".format(response.json()['id'], response.json()['name']))
+    else:
+        print("No result")
+except:
     print("Not a valid JSON")
