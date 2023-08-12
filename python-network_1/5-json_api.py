@@ -15,8 +15,7 @@ url = 'http://0.0.0.0:5000/search_user'
 response = requests.post(url, json=parameter)
 
 if response.json():
-    for key, value in response.json().items():
-        print("[{}] {}".format(key, value))
+        print("[{}] {}".format(response.json()['id'], response.json()['name']))
 elif not response.json():
     print("No result")
 else:
