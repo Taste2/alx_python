@@ -5,9 +5,10 @@ Python script that takes in a letter and sends a POST request to
 import sys
 import requests
 
-q = sys.argv[1]
-if q is False:
+if sys.argv[1] is False:
     q = ""
+else:
+    q = sys.argv[1]
 
 parameter = {'q':q}
 url = 'http://0.0.0.0:5000/search_user'
