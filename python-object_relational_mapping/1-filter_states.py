@@ -4,12 +4,12 @@ Write a script that lists all states with a name starting with N (upper N) from 
 if __name__ == "__main__":
     import MySQLdb
     # Connect to the database
-    connector = MySQLdb.connect(user='root', passwd='St10285515', db='test_0')
+    connector = MySQLdb.connect(user='root', passwd='St10285515', db='test_1')
 
     # a cursor to manipulate the database
     db_cur = connector.cursor()
 
-    db_cur.execute("USE test_0")
+    db_cur.execute("USE test_1")
     db_cur.execute("SELECT * FROM states WHERE name[0]='N'")
     states_data = db_cur.fetchall()
 
