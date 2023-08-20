@@ -14,4 +14,4 @@ if __name__ == "__main__":
     states_data = db_cur.fetchall()
 
     for data in states_data:
-        print(states_data)
+        print(data)
