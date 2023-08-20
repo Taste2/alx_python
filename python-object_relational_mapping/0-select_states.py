@@ -10,4 +10,5 @@ if __name__ == "__main__":
     db_cur = connector.cursor()
 
     db_cur.execute("USE test_0")
-    db_cur.execute("SELECT * FROM states")
+    states_data = db_cur.execute("SELECT * FROM states")
+    print(states_data)
