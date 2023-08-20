@@ -1,8 +1,8 @@
 '''
 This program lists all states from the database hbtn_0e_0_usa
 '''
+import MySQLdb
 if __name__ == "__main__":
-    import MySQLdb
 
     # Connect to the database
     connector = MySQLdb.connect(user='root', passwd='St10285515', db='test_0')
