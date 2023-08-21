@@ -15,6 +15,13 @@ Base = declarative_base
 
 # A class to create the tables
 class State(Base):
+    '''
+    A model of the table 'states'
+
+    parameters:
+    id: unique id of each state
+    name: name of each state
+    '''
     __tablename__ = "states"
     id = Column(Integer, autoincrement=True, unique=True, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
