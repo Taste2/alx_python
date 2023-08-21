@@ -16,8 +16,8 @@ if __name__ == "__main__":
     db_cur.execute("USE test_3")
     state_search = sys.argv[4]
     query = "SELECT * FROM states \
-            WHERE name COLLATE utf8mb4_bin LIKE '{}%'".format(state_search)
-    db_cur.execute(query)
+            WHERE name COLLATE utf8mb4_bin LIKE %s"
+    db_cur.execute(query, (state_search + '%'),)
     states_data = db_cur.fetchall()
 
     for data in states_data:
