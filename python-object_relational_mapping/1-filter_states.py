@@ -1,5 +1,6 @@
 '''
-Write a script that lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa:
+Write a script that lists all states with a 
+name starting with N (upper N) from the database hbtn_0e_0_usa:
 '''
 if __name__ == "__main__":
     import MySQLdb
@@ -10,7 +11,7 @@ if __name__ == "__main__":
     db_cur = connector.cursor()
 
     db_cur.execute("USE test_1")
-    db_cur.execute("SELECT * FROM states WHERE UPPER(name) LIKE 'N%'")
+    db_cur.execute("SELECT * FROM states WHERE UPPER(name) LIKE 'N'")
     states_data = db_cur.fetchall()
 
     for data in states_data:
