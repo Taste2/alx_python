@@ -8,12 +8,12 @@ if __name__ == "__main__":
     import sys
 
     # Connect to the database
-    connector = MySQLdb.connect(user='root', passwd='St10285515', db='test_2')
+    connector = MySQLdb.connect(user='root', passwd='St10285515', db='test_3')
 
     # a cursor to manipulate the database
     db_cur = connector.cursor()
 
-    db_cur.execute("USE test_2")
+    db_cur.execute("USE test_3")
     state_search = sys.argv[4]
     query = "SELECT * FROM states \
             WHERE name COLLATE utf8mb4_bin LIKE '{}%'".format(state_search)
