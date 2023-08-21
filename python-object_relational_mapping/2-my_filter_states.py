@@ -6,7 +6,6 @@ where name matches the argument.
 if __name__ == "__main__":
     import MySQLdb
 
-    searched_state = input("Enter any State: ")
     # Connect to the database
     connector = MySQLdb.connect(user='root', passwd='St10285515', db='test_2')
 
@@ -14,6 +13,7 @@ if __name__ == "__main__":
     db_cur = connector.cursor()
 
     db_cur.execute("USE test_2")
+    searched_state = input("Enter any State: ")
     query = "SELECT * FROM states \
                    WHERE name COLLATE utf8mb4_bin LIKE '{}%'".format(searched_state)
     db_cur.execute(query)
