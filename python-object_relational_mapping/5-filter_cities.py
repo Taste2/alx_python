@@ -9,7 +9,7 @@ if __name__ == "__main__":
 
     state_searched = sys.argv[4]
     # Connect to the database
-    connector = MySQLdb.connect(user='root', passwd='St10285515', db='test_5')
+    connector = MySQLdb.connect(user='root', passwd='St10285515', db='hbtn_0e_4_usa')
 
     # a cursor to manipulate the database
     db_cur = connector.cursor()
