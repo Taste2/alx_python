@@ -1,12 +1,12 @@
 '''
-A python file that contains the class definition of a
-State and an instance Base = declarative_base():
+    This module is a python file that contains the class definition of a
+    State and an instance Base = declarative_base():
 
-class:
-State: Model of the table states which inherits from Base
- attr:
-    id: unigue id of each state
-    name: names of the states
+    class:
+    State: Model of the table states which inherits from Base
+    attr:
+        id: unigue id of each state
+        name: names of the states
 '''
 
 from sqlalchemy import create_engine, Column, Integer, String
