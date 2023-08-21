@@ -9,7 +9,7 @@ if __name__ == "__main__":
     # a cursor to manipulate the database
     db_cur = connector.cursor()
 
-    db_cur.execute("SELECT * FROM cities")
+    db_cur.execute("SELECT id, name FROM cities")
     states_data = db_cur.fetchall()
 
     for data in states_data:
