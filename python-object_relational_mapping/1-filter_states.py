@@ -11,7 +11,7 @@ if __name__ == "__main__":
     db_cur = connector.cursor()
 
     db_cur.execute("USE test_1")
-    db_cur.execute("SELECT * FROM states WHERE name COLLATE utf8_bin LIKE 'N%'")
+    db_cur.execute("SELECT * FROM states WHERE name COLLATE utf8mb4_bin LIKE 'N%'")
     states_data = db_cur.fetchall()
 
     for data in states_data:
