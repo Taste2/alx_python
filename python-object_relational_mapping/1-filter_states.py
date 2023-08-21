@@ -10,7 +10,7 @@ if __name__ == "__main__":
     db_cur = connector.cursor()
 
     db_cur.execute("USE test_1")
-    db_cur.execute("SELECT * FROM states WHERE name LIKE 'N%' OR name LIKE 'n%'")
+    db_cur.execute("SELECT * FROM states WHERE UPPER(name) LIKE 'N%'")
     states_data = db_cur.fetchall()
 
     for data in states_data:
