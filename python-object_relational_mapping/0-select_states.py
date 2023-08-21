@@ -9,7 +9,6 @@ if __name__ == "__main__":
     # a cursor to manipulate the database
     db_cur = connector.cursor()
 
-    db_cur.execute("USE test_0")
     db_cur.execute("SELECT * FROM states")
     states_data = db_cur.fetchall()
 
