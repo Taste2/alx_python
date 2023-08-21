@@ -1,6 +1,9 @@
 '''
-a python file that contains the class definition of a
+A python file that contains the class definition of a
 State and an instance Base = declarative_base():
+
+class:
+State: Model of the table states which inherits from Base
 '''
 
 from sqlalchemy import create_engine, Column, Integer, String
