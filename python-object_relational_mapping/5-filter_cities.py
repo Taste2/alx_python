@@ -17,7 +17,7 @@ if __name__ == "__main__":
     connector = MySQLdb.connect(user=user, passwd=password, db=database)
 
     # a cursor to manipulate the database
-    db_cur = connector.cursor(MySQLdb.cursors.NamedTupleCursor)
+    db_cur = connector.cursor()
     db_cur.execute("""SELECT name
                    FROM cities
                    WHERE state_id =
