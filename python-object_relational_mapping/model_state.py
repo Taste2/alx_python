@@ -19,7 +19,7 @@ engine = create_engine(DATABASE_URI)
 # Base class
 Base = declarative_base
 '''
-Create a base class that serves as the foundation for defining
+A base class that serves as the foundation for defining
 database models (tables) using the
 Object-Relational Mapping (ORM) approach.
 '''
@@ -34,7 +34,6 @@ class State(Base):
         id(int): unique identity number of each state
     
         name(string): name of each state
-
     '''
     __tablename__ = "states"
     id = Column(Integer, autoincrement=True, unique=True, nullable=False, primary_key=True)
