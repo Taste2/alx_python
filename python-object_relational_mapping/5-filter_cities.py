@@ -22,7 +22,7 @@ if __name__ == "__main__":
                    FROM cities
                    WHERE state_id =
                     (SELECT id FROM states
-                    WHERE states = state_searched)
+                    WHERE name = state_searched)
                    ORDER BY id ASC""")
     states_data = db_cur.fetchall()
 
