@@ -17,7 +17,7 @@ if __name__ == "__main__":
     connector = MySQLdb.connect(user=user, passwd=password, db=database)
 
     # a cursor to manipulate the database
-    db_cur = connector.cursor()
+    db_cur = connector.cursor(MySQLdb.cursors.NamedTupleCursor)
     db_cur.execute("""SELECT name
                    FROM cities
                    WHERE state_id =
@@ -26,5 +26,8 @@ if __name__ == "__main__":
                    ORDER BY id ASC""".format(state_searched))
     states_data = db_cur.fetchall()
 
-    for data in states_data:
-        print(data)
+    cities = ', '.join(data.name for data in states_data)
+    print(cities)
+
+    connector.close()
+    db_cur.close()
