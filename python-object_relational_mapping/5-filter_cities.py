@@ -26,7 +26,7 @@ if __name__ == "__main__":
                    ORDER BY id ASC""".format(state_searched))
     states_data = db_cur.fetchall()
 
-    cities = ', '.join(data[1] for data in states_data)
+    cities = ', '.join(data[0] for data in states_data)
     print(cities)
 
     connector.close()
