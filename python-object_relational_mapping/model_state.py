@@ -11,13 +11,22 @@ State: Model of the table states which inherits from Base
 
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+import MySQLdb
 
-# Create engine
-DATABASE_URI = "mysql://root:St10285515"
-engine = create_engine(DATABASE_URI)
+username = 'root'
+password = 'St10285515'
+database = 'test_6'
+# Create connection URL
+connector = "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, database)
+
+# Create an SQLAlchemy engine
+engine = create_engine(connector)
+
+# Establish a connection to the database
+connection = engine.connect()
 
 # Base class
-Base = declarative_base
+Base = declarative_base()
 '''
 A base class that serves as the foundation for defining
 database models (tables) using the
