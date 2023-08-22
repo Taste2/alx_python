@@ -6,10 +6,15 @@ using the database hbtn_0e_4_usa
 if __name__ == "__main__":
     import MySQLdb
     import sys
+    
 
+    user = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
     state_searched = sys.argv[4]
+    
     # Connect to the database
-    connector = MySQLdb.connect(user='root', passwd='St10285515', db='hbtn_0e_4_usa')
+    connector = MySQLdb.connect(user=user, passwd=password, db=database)
 
     # a cursor to manipulate the database
     db_cur = connector.cursor()
