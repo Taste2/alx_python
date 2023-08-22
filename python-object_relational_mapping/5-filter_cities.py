@@ -18,9 +18,12 @@ if __name__ == "__main__":
 
     # a cursor to manipulate the database
     db_cur = connector.cursor()
-    db_cur.execute("SELECT cities.id, cities.name, state_searched.id \
-                   FROM cities, state_searched \
-                   WHERE states_id = state_searched.id ORDER BY cities.id")
+    db_cur.execute("SELECT id, name, \
+                   FROM cities \
+                   WHERE states_id = \
+                   (SELECT id FROM states \
+                   WHERE states = state_searched)\
+                   ORDER BY id ASC")
     states_data = db_cur.fetchall()
 
     for data in states_data:
