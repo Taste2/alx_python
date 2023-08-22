@@ -22,11 +22,14 @@ Base = declarative_base
 # A class to create the tables
 class State(Base):
     '''
-    A model of the table 'states'
+    A class that models the table 'states', inherited from Base
 
-    parameters:
-    id: unique id of each state
-    name: name of each state
+    Attributes:
+
+        id(int): unique identity number of each state
+    
+        name(string): name of each state
+
     '''
     __tablename__ = "states"
     id = Column(Integer, autoincrement=True, unique=True, nullable=False, primary_key=True)
