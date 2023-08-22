@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     state_search = sys.argv[4]
     query = "SELECT * FROM states \
-            WHERE name LIKE %s"
-    db_cur.execute(query, (state_search + '%'),)
+            WHERE name LIKE '{}%'".format(state_search)
+    db_cur.execute(query)
     states_data = db_cur.fetchall()
 
     for data in states_data:
