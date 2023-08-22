@@ -21,8 +21,8 @@ if __name__ == "__main__":
     db_cur.execute("""SELECT id, name
                    FROM cities
                    WHERE state_id =
-                    (SELECT id, name FROM states
-                    WHERE name LIKE '{}%')
+                    (SELECT id FROM states
+                    WHERE name COLLATE utf8mb4_bin LIKE '{}%')
                    ORDER BY id ASC""".format(state_searched))
     states_data = db_cur.fetchall()
 
