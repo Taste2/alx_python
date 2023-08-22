@@ -21,7 +21,7 @@ if __name__ == "__main__":
     db_cur.execute("""SELECT id, name
                    FROM cities
                    WHERE state_id =
-                    (SELECT id FROM states
+                    (SELECT id, name FROM states
                     WHERE name = state_searched)
                    ORDER BY id ASC""")
     states_data = db_cur.fetchall()
