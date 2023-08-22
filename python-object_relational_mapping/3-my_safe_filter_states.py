@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     state_search = sys.argv[4]
     query = "SELECT * FROM states \
-            WHERE name = %(name)s"
+            WHERE name = %(state_search)s"
     db_cur.execute(query, {'name': state_search})
     states_data = db_cur.fetchall()
 
