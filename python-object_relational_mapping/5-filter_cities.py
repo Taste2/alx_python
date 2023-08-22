@@ -22,7 +22,7 @@ if __name__ == "__main__":
                    FROM cities
                    WHERE state_id =
                     (SELECT id, name FROM states
-                    WHERE name = '{}%')
+                    WHERE name LIKE '{}%')
                    ORDER BY id ASC""".format(state_searched))
     states_data = db_cur.fetchall()
 
