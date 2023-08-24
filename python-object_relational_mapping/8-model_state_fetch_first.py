@@ -1,5 +1,5 @@
 '''
-A script that lists all State objects from the database hbtn_0e_6_usa
+a script that prints the first State object from the database 
 '''
 if __name__ == "__main__":
     from model_state import State, Base
