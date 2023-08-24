@@ -1,8 +1,19 @@
 '''
 A script that lists all State objects from the database hbtn_0e_6_usa
 '''
-from model_state import State, Base
-from sqlalchemy.orm import sessionmaker
+if __name__ == "__main__":
+    from model_state import State, Base
+    from sqlalchemy.orm import sessionmaker
+    from sqlalchemy import create_engine
+    import sys
 
-for id, name in session.query(State.id, State.name):
-    print(f"{id}: {name}")
+    path = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]))
+
+    engine = create_engine(path)
+    
+    Base.metadata.create_all(engine)
+
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    for id, name in session.query(State.id, State.name):
+        print(f"{id}: {name}")
