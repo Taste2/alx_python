@@ -20,5 +20,3 @@ class State(Base):
 
     def __init__(self, name):
         self.name = name
-
-Base.metadata.create_all(bind=engine)
