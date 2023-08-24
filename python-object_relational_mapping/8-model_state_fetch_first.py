@@ -1,5 +1,5 @@
 '''
-a script that prints the first State object from the database 
+a script that prints the first State object from the database
 '''
 if __name__ == "__main__":
     from model_state import State, Base
