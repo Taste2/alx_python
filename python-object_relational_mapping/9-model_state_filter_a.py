@@ -1,5 +1,6 @@
 '''
- a script that lists all State objects that contain the letter a from the database
+a script that lists all State objects
+that contain the letter a from the database
 '''
 if __name__ == "__main__":
     from model_state import State, Base
@@ -18,7 +19,7 @@ if __name__ == "__main__":
 
     states = session.query(State).order_by(State.id).all()
     for state in states:
-        if 'a' in state:
+        if 'a' in state.name:
             print("{}: {}".format(state.id, state.name))
 
     session.close()
