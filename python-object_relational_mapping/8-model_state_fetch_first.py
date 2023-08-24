@@ -20,7 +20,6 @@ if __name__ == "__main__":
     if state:
         print("{}: {}".format(state.id, state.name))
     else:
-        print('')
-        print('\n')
+        print('Nothing\n')
 
     session.close()
