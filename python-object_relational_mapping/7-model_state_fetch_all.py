@@ -11,6 +11,7 @@ if __name__ == "__main__":
                          .format(sys.argv[1], sys.argv[2], sys.argv[3]))
 
     engine = create_engine(path)
+    connection = engine.connect()
 
     Session = sessionmaker(bind=engine)
     session = Session()
