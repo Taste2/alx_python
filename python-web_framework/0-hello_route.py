@@ -1,9 +1,9 @@
 '''
-This pyth0n script starts a Flask web application and 
-displays a text on the screen. 
+This python script starts a Flask web application and
+displays a text on the screen.
 
 function:
-    Hello(): Displays a text on the screen
+    hello(): Displays a text on the screen
         return - Text
 '''
 
@@ -14,7 +14,7 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
-def Hello():
+def hello():
     '''
     A function that returns a text
 
