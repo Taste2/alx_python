@@ -27,6 +27,7 @@ def hello():
     '''
     return "Hello HBNB!"
 
+
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     '''
@@ -36,6 +37,7 @@ def hbnb():
     '''
     return "HBNB"
 
+
 @app.route('/c/<text>')
 def c(text):
     '''
@@ -43,6 +45,7 @@ def c(text):
 
     return: a text
     '''
+    text = text.replace('_', " ")
     return "C {}".format(escape(text))
 
 if __name__ == '__main__':
