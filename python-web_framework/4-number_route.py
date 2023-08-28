@@ -66,7 +66,7 @@ def python_(text=None):
         return "Python is cool"
 
 
-@app.route('number/<n>')
+@app.route('number/<n>', strict_slashes=False)
 def numb_(n):
     '''
     Check if n is integer
