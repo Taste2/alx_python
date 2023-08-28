@@ -50,6 +50,7 @@ def c(text):
 
 
 @app.route('/python/(<text>)')
+@app.route('/python/<text>')
 @app.route('/python/')
 @app.route('/python')
 def python_(text=None):
