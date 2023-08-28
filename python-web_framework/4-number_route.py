@@ -67,7 +67,7 @@ def python_(text=None):
 
 
 @app.route('number/<n>')
-def number(n):
+def numb_(n):
     '''
     Check if n is integer
 
@@ -76,7 +76,7 @@ def number(n):
     return:
         a text
     '''
-    if n is int:
+    if isinstance(n, int):
         return "{} is a number".format(escape(n))
 
 if __name__ == '__main__':
