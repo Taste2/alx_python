@@ -8,6 +8,15 @@ function:
 
     hbnb(): Displays a text on the screen
         return - Text
+
+    c(text): Displays a text on the screen
+        return - Text
+
+    python_(text=none): Displays a text on the screen
+        return - Text
+
+    numb(n): Chexks if n is integer
+        return - Text
 '''
 
 # Import the class Flask from flask module
