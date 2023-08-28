@@ -50,14 +50,19 @@ def c(text):
 
 
 @app.route('/python/(<text>)')
-def python_(text):
+@app.route('/python/')
+@app.route('/python')
+def python_(text=None):
     '''
     A function that returns a text
 
     return: a text
     '''
-    text = text.replace('_', " ")
-    return "Python {}".format(text)
+    if text:
+        text = text.replace('_', " ")
+        return "Python {}".format(text)
+    else:
+        return "Python is cool"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
