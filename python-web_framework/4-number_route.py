@@ -75,7 +75,7 @@ def python_(text=None):
         return "Python is cool"
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     '''
     Checks if n is integer
@@ -85,9 +85,7 @@ def number(n):
     return:
         a text
     '''
-    n = int(n)
-    if isinstance(n, int):
-        return "{} is a number".format(n)
+    return "{} is a number".format(n)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port='5000')
