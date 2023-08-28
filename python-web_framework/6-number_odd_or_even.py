@@ -111,7 +111,11 @@ def even_odd(n):
     return:
         an html resource
     '''
-    return render_template('6-number_odd_or_even.html', n=n)
+    if n%2 == 0:
+        status = 'is even'
+    elif n%2 != 0:
+        status = 'is odd'
+    return render_template('6-number_odd_or_even.html', n=n, status=status)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port='5000')
