@@ -50,9 +50,9 @@ def c(text):
 
 
 @app.route('/python/(<text>)', strict_slashes=False)
-@app.route('/python/<text>')
-@app.route('/python/')
-@app.route('/python')
+@app.route('/python/<text>', strict_slashes=False)
+@app.route('/python/', strict_slashes=False)
+@app.route('/python', strict_slashes=False)
 def python_(text=None):
     '''
     A function that returns a text
