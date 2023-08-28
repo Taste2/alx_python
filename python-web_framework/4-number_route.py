@@ -38,7 +38,7 @@ def hbnb():
     return "HBNB"
 
 
-@app.route('/c/<text>')
+@app.route('/c/<text>', strict_slashes=False)
 def c(text):
     '''
     A function that returns a text
@@ -49,7 +49,7 @@ def c(text):
     return "C {}".format(escape(text))
 
 
-@app.route('/python/(<text>)')
+@app.route('/python/(<text>)', strict_slashes=False)
 @app.route('/python/<text>')
 @app.route('/python/')
 @app.route('/python')
