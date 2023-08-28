@@ -111,9 +111,9 @@ def even_odd(n):
     return:
         an html resource
     '''
-    if n%2 == 0:
+    if n % 2 == 0:
         status = 'is even'
-    elif n%2 != 0:
+    elif n % 2 != 0:
         status = 'is odd'
     return render_template('6-number_odd_or_even.html', n=n, status=status)
 
