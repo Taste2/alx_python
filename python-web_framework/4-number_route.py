@@ -75,18 +75,19 @@ def python_(text=None):
         return "Python is cool"
 
 
-@app.route('number/<n>', strict_slashes=False)
-def numb_(n):
+@app.route('/number/<n>', strict_slashes=False)
+def number(n):
     '''
-    Check if n is integer
+    Checks if n is integer
 
-    Parameter:
-        n: the value to check
+    param:
+        n: value to be checked
     return:
         a text
     '''
+    n = int(n)
     if isinstance(n, int):
         return "{} is a number".format(n)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='5000')
+    app.run(debug=True, host='0.0.0.0', port='5000')
