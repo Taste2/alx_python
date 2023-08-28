@@ -57,7 +57,7 @@ def python_(text):
     return: a text
     '''
     text = text.replace('_', " ")
-    return "Python {}".format(escape(text))
+    return "Python {}".format(text)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
