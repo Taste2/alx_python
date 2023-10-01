@@ -4,11 +4,12 @@ and display in a special format.
 
 It retrieves employees name, task completed with their titles.
 """
+import requests
+import sys
+
 # No execution of this file when imported
 if __name__ == "__main__":
-    import requests
-    import sys
-
+    
 # Pass employee id on command line
     id = sys.argv[1]
 
