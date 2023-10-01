@@ -6,8 +6,8 @@ It retrieves employees name, task completed with their titles.
 """
 # No execution of this file when imported
 if __name__ == "__main__":
-    import sys
     import requests
+    import sys
 
 # Pass employee id on command line
     id = sys.argv[1]
