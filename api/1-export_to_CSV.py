@@ -36,7 +36,7 @@ if __name__ == "__main__":
         dataList.append(dataDict)
 
     # Specify the CSV file path
-    csv_file_path = '{}.csv'.format(id)
+    csv_file_path = '{}.csv'.format(todoJson_Data[0]['userId'])
 
     # Define the field names (column headers)
     fieldnames = ["userId", "name", "completed", "title"]
@@ -49,5 +49,3 @@ if __name__ == "__main__":
         # Write the data rows
         for row in dataList:
             csv_writer.writerow(row)
-
-    print(profileJson_Data)
