@@ -27,7 +27,7 @@ if __name__ == "__main__":
     profileJson_Data = profileResponse.json()
 
 #Get employee information
-    employeeName = profileJson_Data['name']
+    employeeName = profileJson_Data['username']
 
     dataList = []
 
@@ -49,3 +49,5 @@ if __name__ == "__main__":
         # Write the data rows
         for row in dataList:
             csv_writer.writerow(row)
+
+    print(profileJson_Data)
