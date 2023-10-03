@@ -28,6 +28,7 @@ if __name__ == "__main__":
 
 #Get employee information
     employeeName = profileJson_Data['username']
+    employeeId = profileJson_Data['id']
 
     dataList = []# Empty list to store the dictionaries
 
@@ -36,10 +37,10 @@ if __name__ == "__main__":
         dataList.append(dataDict)
 
 # A dictionary of list of dictionaries to be exported to JSON
-    outputData = {profileJson_Data['id']: dataList}
+    outputData = {employeeId: dataList}
 
 # Specify the JSON file path
-    json_file_path = '{}.json'.format(todoJson_Data[0]['userId'])
+    json_file_path = '{}.json'.format(employeeId)
 
 # Open the JSON file in write mode
     with open(json_file_path, 'w') as json_file:
