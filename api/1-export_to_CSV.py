@@ -44,7 +44,7 @@ if __name__ == "__main__":
     # Open the CSV file in write mode
     with open(csv_file_path, 'w', newline='') as csv_file:
         # Create a CSV writer
-        csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        csv_writer = csv.DictWriter(csv_file, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
 
         # Write the data rows
         for row in dataList:
